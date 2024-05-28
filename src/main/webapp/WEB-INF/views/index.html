@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Title</title>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#hide").click(function () {
+        $("p").hide();
+      });
+      $("#show").click(function () {
+        $("p").show();
+      });
+      $("#start").click(function () {
+        var div = $("div");
+        div.animate({left: '+=250px'}, "slow");
+        div.animate({fontSize: '50px'}, "slow");
+      });
+      $("#reset").click(function () {
+        var div = $("div");
+        div.animate({left: '0px'}, "slow");
+        div.animate({fontSize: '16px'}, "slow");
+      });
+    });
+  </script>
+  <style>
+    div {
+      position: relative;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+<button id="start">Start Animation</button>
+<button id="reset">Reset Animation</button>
+<p>When you click on the "Hide" button, I will disappear.</p>
+<div style="background:#98bf21;height:100px;width:200px;">HELLO</div>
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+</body>
+</html>
